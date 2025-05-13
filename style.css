@@ -1,0 +1,161 @@
+/* Reset & Global Box Model */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  background-color: #000000; /* black background */
+  color: #ffffff; /* text color */
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin: 20px;
+  padding: 0;
+  line-height: 1.4;
+  letter-spacing: 1px;
+  word-spacing: 0.9px;
+  font-size: 1.2rem;
+}
+
+/* Navbar */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  background: rgba(20, 20, 20, 0.6);
+  border-bottom: 1px solid #00f7ff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  color: #ff007f;
+  text-transform: uppercase;
+}
+
+/* Navigation Links */
+nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #ff007f;
+  transition: width 0.4s ease;
+}
+
+nav a:hover {
+  color: #ff007f;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Main Section Container */
+main {
+  padding: 15px;
+  background-color: #8a984d; /* light green background for contrast layering */
+}
+
+/* Content Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 4rem 2rem;
+}
+
+/* Card Styling */
+.card {
+  background: #111111;
+  padding: 1.5rem;
+  border-left: 5px solid #ff007f;
+  border-radius: 12px;
+  box-shadow: 0 0 12px #ff007f66;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px #ff007faa;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  color: #ff007f;
+  margin-bottom: 0.5rem;
+}
+
+/* Section Spacing */
+section {
+  margin-bottom: 3em;
+}
+
+/* Paragraph Styling */
+p {
+  color: white;
+  font-size: 20px;
+}
+
+/* Generic Div Styling */
+div {
+  background-color: black;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* Footer Styling */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #000000;
+  color: #888;
+  font-size: 0.9rem;
+  border-top: 1px solid #222;
+}
+
+footer a {
+  margin: 0 10px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+/* Logo Placeholder Class */
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent); /* make sure --accent is defined */
+}
