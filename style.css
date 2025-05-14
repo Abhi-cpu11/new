@@ -72,10 +72,8 @@ nav a:hover::after {
   width: 100%;
 }
 
-/* Main Section Container */
+/* Main Section */
 main {
-  padding: 15px;
-  background-color: #8a984d; /* light green background for contrast layering */
 }
 
 /* Content Grid */
@@ -137,12 +135,24 @@ footer {
   background-color: #000000;
   color: #888;
   font-size: 0.9rem;
-  border-top: 1px solid #222;
+  border-top: 1px solid #00f7ff;
+}
+
+footer p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+footer .social-media-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
 footer a {
-  margin: 0 10px;
-  color: #ffffff;
+  font-size: 1.5rem;
+
   text-decoration: none;
   font-weight: bold;
   transition: 0.3s;
@@ -151,6 +161,12 @@ footer a {
 footer a:hover {
   text-decoration: underline;
   opacity: 0.8;
+}
+
+footer a img {
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
 }
 
 /* Logo Placeholder Class */

@@ -1,3 +1,15 @@
+<!--Name: Abhi Kalkat 
+
+Course: Webdev 10s 
+
+Teacher: Ms. Hoitink 
+
+School: Pembina Trails Collegiate 
+
+Date Last Modified: May 14, 2025 
+
+Change color scheme
+-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,24 +17,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Naawi-Oodena – The Future After Dark</title>
     <link rel="stylesheet" href="style.css" />
-
     <style>
-      /* === COLOR SCHEME ===
-    Primary: Hot Pink (#ff007f)
-    Secondary: Neon Blue (#00f7ff), Electric Purple (#a259ff)
-    Neutrals: White (#ffffff), Black (#000000)
-    */
+      /* === COLOUR SCHEME ===
+        Primary: Hot Pink (#ff007f)
+        Secondary: Neon Blue (#00f7ff), Electric Purple (#a259ff)
+        Neutrals: White (#ffffff), Black (#000000)
+        */
 
       /* HERO VIDEO SECTION */
-      .everyone-copied-video {
+      .hero-video {
         position: relative;
         width: 100%;
         height: 100vh;
-        margin-top: 70px;
         overflow: hidden;
+        margin-top: 70px;
       }
 
-      .everyone-copied-video video {
+      .hero-video video {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -33,7 +44,7 @@
         z-index: -1;
       }
 
-      .cool-text {
+      .hero-text {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -45,82 +56,85 @@
         padding: 1rem;
       }
 
-      .bold-text h2 {
+      .hero-text h2 {
         font-size: 3rem;
         color: #ff007f;
         margin-bottom: 1rem;
       }
 
+      .hero-text p {
+        font-size: 1.2rem;
+        color: #dddddd;
+      }
     </style>
   </head>
+
   <body>
     <!-- NAV -->
     <header>
-      <h1>Naawi</h1>
+      <h1>Naawi-Oodena</h1>
       <nav>
         <a href="index.html">Home</a>
-        <a href="residential.html">Residential</a>
-        <a href="community.html">Community</a>
-        <a href="nightlife.html">Nightlife</a>
-        <a href="contact.html">Contact</a>
+        <a href="exploring-naawi-oodena.html">Exploring</a>
+        <a href="contact.html">Contact Us</a>
       </nav>
     </header>
 
     <!-- HERO VIDEO -->
-    <section class="hero-video">
-      <video autoplay muted loop>
-        <source src="nawwi.mp4.mp4" type="video/mp4" />
-        <!-- Replace the video with a relevant Indigenous future-themed MP4 -->
-      </video>
-      <div class="hero-text">
-        <h2>Live the Glow</h2>
-        <p>Where culture, future, and nightlife come alive at Naawi-Oodena.</p>
-      </div>
-    </section>
+    <main>
+      <section class="hero-video">
+        <video autoplay muted loop>
+          <source src="nawwi.mp4" type="video/mp4" />
+          <!-- Ensure the video file name is correct -->
+        </video>
+        <div class="hero-text">
+          <h2>Live the Glow</h2>
+          <p>
+            Where culture, future, and nightlife come alive at Naawi-Oodena.
+          </p>
+        </div>
+      </section>
 
-    <!-- FEATURE GRID -->
-    <section class="grid">
-      <div class="card">
-        <img
-          src="https://images.unsplash.com/photo-1508609349937-5ec4ae374ebf?auto=format&fit=crop&w=800&q=80"
-          alt="Nightlife scene" />
-        <h3>Night Market</h3>
-        <p>
-          LED-lit food stalls and Indigenous fusion cuisine draw crowds into the
-          night.
-        </p>
-      </div>
+      <!-- FEATURE GRID -->
+      <section class="grid">
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1508609349937-5ec4ae374ebf?auto=format&fit=crop&w=800&q=80"
+            alt="Nightlife scene" />
+          <h3>Night Market</h3>
+          <p>
+            LED-lit food stalls and Indigenous fusion cuisine draw crowds into
+            the night.
+          </p>
+        </div>
 
-      <div class="card">
-        <img
-          src="https://images.unsplash.com/photo-1533077161703-646d60d97ab2?auto=format&fit=crop&w=800&q=80"
-          alt="Cultural Dome" />
-        <h3>Projection Dome</h3>
-        <p>
-          Stories and traditions come alive on a 360° digital canvas under
-          starlight.
-        </p>
-      </div>
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1533077161703-646d60d97ab2?auto=format&fit=crop&w=800&q=80"
+            alt="Cultural Dome" />
+          <h3>Projection Dome</h3>
+          <p>
+            Stories and traditions come alive on a 360° digital canvas under
+            starlight.
+          </p>
+        </div>
 
-      <div class="card">
-        <img
-          src="https://images.unsplash.com/photo-1617957746599-dcfef4ec73c5?auto=format&fit=crop&w=800&q=80"
-          alt="Youth Centre" />
-        <h3>Glow Zone</h3>
-        <p>
-          Interactive sports courts, neon murals, and creative labs for youth
-          expression.
-        </p>
-      </div>
-    </section>
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1617957746599-dcfef4ec73c5?auto=format&fit=crop&w=800&q=80"
+            alt="Youth Centre" />
+          <h3>Glow Zone</h3>
+          <p>
+            Interactive sports courts, neon murals, and creative labs for youth
+            expression.
+          </p>
+        </div>
+      </section>
+    </main>
 
     <!-- FOOTER -->
     <footer>
-      <p>&copy; 2045 Naawi-Oodena | Designed by Abhijay</p>
-        <a href="https://www.instagram.com/" target="_blank">📸 Instagram</a>
-        <a href="https://www.facebook.com/" target="_blank">📘 Facebook</a>
-        <a href="https://www.youtube.com/" target="_blank">▶️ YouTube</a>
-      </div>
+      <p>© 2025 Abhi Kalkat</p>
     </footer>
   </body>
 </html>
