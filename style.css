@@ -168,10 +168,3 @@ footer a img {
   height: 30px;
   margin-right: 8px;
 }
-
-/* Logo Placeholder Class */
-.logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--accent); /* make sure --accent is defined */
-}
