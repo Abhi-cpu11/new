@@ -7,15 +7,18 @@
 
 /* Body Styling */
 body {
-  background-color: #000000; /* black background */
-  color: #ffffff; /* text color */
+  /* black background */
+  background-color: #000000;
+  /* text color */
+  color: #ffffff;
+  /* font family is san serif because since we are in 15-20 years in the future, I want my website to appear timely and futuristic and the color theme wouldn;t match with serif. */
   font-family: Georgia, "Times New Roman", Times, serif;
-  margin: 20px;
   padding: 0;
   line-height: 1.4;
   letter-spacing: 1px;
   word-spacing: 0.9px;
   font-size: 1.2rem;
+  margin: 20px;
 }
 
 /* Navbar */
@@ -23,7 +26,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 1;
   backdrop-filter: blur(8px);
   background: rgba(20, 20, 20, 0.6);
   border-bottom: 1px solid #00f7ff;
@@ -31,6 +34,8 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
+  /* To undo the body 20px */
+  margin-left: -20px;
 }
 
 header h1 {
@@ -54,6 +59,7 @@ nav a {
 }
 
 nav a::after {
+  /* The pseudo-element is used just for styling for the underline effect, not for text that's why the content is set to a empty string. */
   content: "";
   position: absolute;
   width: 0;
@@ -73,6 +79,8 @@ nav a:hover::after {
 }
 
 /* Main Section */
+main {
+}
 
 /* Content Grid */
 .grid {
@@ -99,6 +107,7 @@ nav a:hover::after {
 
 .card img {
   width: 100%;
+  height: 300px;
   border-radius: 10px;
   margin-bottom: 1rem;
 }
@@ -131,7 +140,6 @@ footer {
   text-align: center;
   padding: 2rem 1rem;
   background-color: #000000;
-  color: #888;
   font-size: 0.9rem;
   border-top: 1px solid #00f7ff;
 }
