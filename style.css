@@ -1,3 +1,12 @@
+/* #00E5FF cyan/ primary 
+
+Secondarys #FF00E5 hot pink, #E5FF00 yellow,  
+
+Neutrals black and white */
+html {
+  scroll-behavior: smooth;
+}
+
 /* Reset & Global Box Model */
 * {
   margin: 0;
@@ -11,13 +20,13 @@ body {
   background-color: #000000;
   /* text color */
   color: #ffffff;
-  /* font family is san serif because since we are in 15-20 years in the future, I want my website to appear timely and futuristic and the color theme wouldn;t match with serif. */
-  font-family: Georgia, "Times New Roman", Times, serif;
+  /* font family is san serif because since we are in 15-20 years in the future, I want my website to appear timely and futuristic and the color theme wouldn't match with serif guidelines. */
+  font-family: Helvetica, Arial, sans-serif;
   padding: 0;
   line-height: 1.4;
   letter-spacing: 1px;
   word-spacing: 0.9px;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   margin: 20px;
 }
 
@@ -39,7 +48,7 @@ header {
 }
 
 header h1 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: #ff007f;
   text-transform: uppercase;
 }
@@ -115,17 +124,12 @@ main {
 .card h3 {
   color: #ff007f;
   margin-bottom: 0.5rem;
+  font-size: 2rem;
 }
 
 /* Section Spacing */
 section {
   margin-bottom: 3em;
-}
-
-/* Paragraph Styling */
-p {
-  color: white;
-  font-size: 20px;
 }
 
 /* Generic Div Styling */
@@ -140,12 +144,10 @@ footer {
   text-align: center;
   padding: 2rem 1rem;
   background-color: #000000;
-  font-size: 0.9rem;
   border-top: 1px solid #00f7ff;
 }
 
 footer p {
-  font-size: 1.1rem;
   margin-bottom: 1rem;
 }
 
@@ -157,7 +159,7 @@ footer .social-media-links {
 }
 
 footer a {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   text-decoration: none;
   font-weight: bold;
   transition: 0.3s;
