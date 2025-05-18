@@ -58,6 +58,17 @@ Change color scheme
         font-size: 1.2rem;
         color: #ffffff;
       }
+
+      /* Content Grid */
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        padding: 4rem 2rem;
+        align-items: start; /* aligns content nicely even with varying heights */
+        grid-auto-rows: 1fr;
+        align-items: stretch;
+      }
     </style>
   </head>
 

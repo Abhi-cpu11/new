@@ -22,12 +22,11 @@ body {
   color: #ffffff;
   /* font family is san serif because since we are in 15-20 years in the future, I want my website to appear timely and futuristic and the color theme wouldn't match with serif guidelines. */
   font-family: Helvetica, Arial, sans-serif;
-  padding: 0;
   line-height: 1.4;
   letter-spacing: 1px;
   word-spacing: 0.9px;
-  font-size: 1.5rem;
-  margin: 20px;
+  font-size: 1.2rem;
+  margin: 0 20px;
 }
 
 /* Navbar */
@@ -53,12 +52,12 @@ header h1 {
   text-transform: uppercase;
 }
 
-/* Navigation Links */
 nav {
   display: flex;
   gap: 1.5rem;
 }
 
+/* Navigation Links */
 nav a {
   color: #ffffff;
   text-decoration: none;
@@ -87,18 +86,9 @@ nav a:hover::after {
   width: 100%;
 }
 
-/* Main Section */
 main {
+  /* border: ;*/
 }
-
-/* Content Grid */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  padding: 4rem 2rem;
-}
-
 /* Card Styling */
 .card {
   background: #111111;
@@ -142,7 +132,7 @@ div {
 /* Footer Styling */
 footer {
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 0;
   background-color: #000000;
   border-top: 1px solid #00f7ff;
 }
@@ -156,10 +146,12 @@ footer .social-media-links {
   justify-content: center;
   align-items: center;
   gap: 20px;
+  flex-wrap: wrap; /* lets the icons wrap nicely on smaller screens */
+  flex-grow: 0;
+  flex-shrink: 1;
 }
 
 footer a {
-  font-size: 1.25rem;
   text-decoration: none;
   font-weight: bold;
   transition: 0.3s;
