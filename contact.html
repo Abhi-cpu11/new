@@ -8,36 +8,37 @@
     <style>
       /* Contact Page Styles */
       main {
-        padding: 6rem 2rem 3rem; /* Top padding to offset fixed navbar */
-        background-color: #000000; /* Match site background */
+        padding: 6rem 2rem 3rem; /* rem stays */
+        background-color: #000000;
         color: #ffffff;
       }
 
       section#contact {
-        max-width: 700px;
+        max-width: 700px; /* leave in px for max-width */
         margin: 0 auto;
         background-color: #111111;
-        padding: 2rem;
-        border-radius: 12px;
-        box-shadow: 0 0 20px #ff007f66;
+        padding: 2rem; /* rem */
+        border-radius: 0.75rem; /* 12px → rem for scaling */
+        box-shadow: 0 0 1.25rem #ff007f; /* 20px → rem */
       }
 
       section#contact h2 {
-        font-size: 2rem;
-        margin-bottom: 1rem;
+        font-size: 2rem; /* rem */
+        margin-bottom: 1rem; /* rem */
         color: #ff007f;
         text-align: center;
       }
 
       section#contact p {
-        margin-bottom: 2rem;
+        margin-bottom: 2rem; /* rem */
         text-align: center;
         color: #ffffff;
+        font-size: 1.1rem; /* rem */
       }
 
       form label {
         display: block;
-        margin-top: 1rem;
+        margin-top: 1rem; /* rem */
         font-weight: bold;
         color: #ff007f;
       }
@@ -46,30 +47,30 @@
       form select,
       form textarea {
         width: 100%;
-        padding: 0.75rem;
-        margin-top: 0.5rem;
-        border: 1px solid #444;
+        padding: 0.75rem; /* rem */
+        margin-top: 0.5rem; /* rem */
+        border: 1px solid #444; /* leave px for thin border */
         background-color: #000;
         color: #fff;
-        border-radius: 7px;
-        font-size: 1rem;
+        border-radius: 0.4375rem; /* 7px → rem */
+        font-size: 1rem; /* rem */
       }
 
       form small {
         display: block;
-        margin-top: 0.3rem;
-        font-size: 0.85rem;
+        margin-top: 0.1875rem; /* 3px → rem */
+        font-size: 0.85rem; /* rem */
         color: #ccc;
       }
 
       .button {
-        margin-top: 2rem;
+        margin-top: 2rem; /* rem */
         background-color: #ff007f;
         color: white;
-        padding: 0.75rem 1.5rem;
+        padding: 0.75rem 1.5rem; /* rem */
         border: none;
-        border-radius: 6px;
-        font-size: 1rem;
+        border-radius: 0.375rem; /* 6px → rem */
+        font-size: 1rem; /* rem */
         font-weight: bold;
         cursor: pointer;
         transition: background-color 0.3s ease;
@@ -82,7 +83,7 @@
   </head>
   <body>
     <header>
-      <h1>Naawi-Oodena</h1>
+      <h2>Naawi-Oodena</h2>
       <nav>
         <a href="index.html">Home</a>
         <a href="exploring-naawi-oodena.html">Exploring</a>
@@ -116,7 +117,10 @@
             name="email"
             placeholder="e.g. you@example.com"
             required />
-          <small>We'll only use this to respond to your message.</small>
+          <small
+            >We'll only use email to respond to your message. Please enter a
+            valid email format (e.g. name@example.com).</small
+          >
 
           <label for="role">Who are you?</label>
           <select id="role" name="role" required>
@@ -144,7 +148,7 @@
             rows="6"
             placeholder="Type your full message here..."
             required></textarea>
-          <small>Please include all relevant details.</small>
+          <small>Please include all relevant details for your message.</small>
 
           <button type="submit" class="button">Send Message</button>
         </form>
@@ -152,7 +156,11 @@
     </main>
 
     <footer>
-      <p>© 2045 Abhi Kalkat</p>
+      <p>
+        © 2045 Abhi Kalkat. All rights reserved. This website is currently under
+        development, and some features including social media links are still in
+        progress. Thank you for your patience and support!
+      </p>
       <div class="social-media-links">
         <a href="https://www.instagram.com" target="_blank">
           <img src="Instagram_logo_2022.svg" alt="Instagram" />Instagram

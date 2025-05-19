@@ -24,7 +24,7 @@ Change color scheme
         width: 100%;
         height: 100vh;
         overflow: hidden;
-        margin-top: 70px;
+        margin-top: 4.375rem; /* 70px → 4.375rem */
       }
 
       .hero-video video {
@@ -44,11 +44,11 @@ Change color scheme
         transform: translate(-50%, -50%);
         text-align: center;
         color: #ffffff;
-        backdrop-filter: blur(3px);
+        backdrop-filter: blur(0.1875rem); /* 3px → 0.1875rem */
         padding: 1rem;
       }
 
-      .hero-text h2 {
+      .hero-text h1 {
         font-size: 3rem;
         color: #ff007f;
         margin-bottom: 1rem;
@@ -62,10 +62,11 @@ Change color scheme
       /* Content Grid */
       .grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+        /* 300px → 18.75rem */
         gap: 2rem;
         padding: 4rem 2rem;
-        align-items: start; /* aligns content nicely even with varying heights */
+        align-items: start;
         grid-auto-rows: 1fr;
         align-items: stretch;
       }
@@ -75,7 +76,7 @@ Change color scheme
   <body>
     <!-- NAV -->
     <header>
-      <h1>Naawi-Oodena</h1>
+      <h2>Naawi-Oodena</h2>
       <nav>
         <a href="index.html">Home</a>
         <a href="exploring-naawi-oodena.html">Exploring</a>
@@ -91,7 +92,7 @@ Change color scheme
           <!-- Ensure the video file name is correct -->
         </video>
         <div class="hero-text">
-          <h2>Live the Glow</h2>
+          <h1>Live the Glow</h1>
           <p>
             Where culture, future, and nightlife come alive at Naawi-Oodena.
           </p>
@@ -151,9 +152,13 @@ Change color scheme
       </section>
     </main>
 
-    <!-- FOOTER -->
+    <!-- FOOTER, when the social media pages is done Ms.Hoitink will hip me up so I can directly take them to there instead of leaving blank -->
     <footer>
-      <p>© 2045 Abhi Kalkat</p>
+      <p>
+        © 2045 Abhi Kalkat. All rights reserved. This website is currently under
+        development, and some features including social media links are still in
+        progress. Thank you for your patience and support!
+      </p>
       <div class="social-media-links">
         <a href="https://www.instagram.com" target="_blank">
           <img src="Instagram_logo_2022.svg" alt="Instagram" />Instagram

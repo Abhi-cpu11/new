@@ -37,7 +37,7 @@ header {
   z-index: 1;
   backdrop-filter: blur(8px);
   background: rgba(20, 20, 20, 0.6);
-  border-bottom: 1px solid #00f7ff;
+  border-bottom: 2px solid #00f7ff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -46,7 +46,7 @@ header {
   margin-left: -20px;
 }
 
-header h1 {
+header h2 {
   font-size: 2rem;
   color: #ff007f;
   text-transform: uppercase;
@@ -54,6 +54,7 @@ header h1 {
 
 nav {
   display: flex;
+  flex-wrap: wrap;
   gap: 1.5rem;
 }
 
@@ -87,7 +88,8 @@ nav a:hover::after {
 }
 
 main {
-  /* border: ;*/
+  border: 0.5px solid yellow;
+  /* This is just for debugging purposes and will chnage so its thin and cyan is visable */
 }
 /* Card Styling */
 .card {
@@ -114,7 +116,7 @@ main {
 .card h3 {
   color: #ff007f;
   margin-bottom: 0.5rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 /* Section Spacing */
@@ -134,21 +136,22 @@ footer {
   text-align: center;
   padding: 0;
   background-color: #000000;
-  border-top: 1px solid #00f7ff;
+  border-top: 2px solid #00f7ff;
 }
 
 footer p {
   margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 footer .social-media-links {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 20px;
+  align-content: center;
   flex-wrap: wrap; /* lets the icons wrap nicely on smaller screens */
   flex-grow: 0;
   flex-shrink: 1;
+  gap: 3vw;
 }
 
 footer a {
@@ -156,6 +159,10 @@ footer a {
   font-weight: bold;
   transition: 0.3s;
   color: #ffffff;
+  display: flex;
+  flex-direction: column; /* Put text above image */
+  align-items: center;
+  margin-top: 1rem;
 }
 
 footer a:hover {
@@ -164,7 +171,178 @@ footer a:hover {
 }
 
 footer a img {
-  width: 30px;
-  height: 30px;
+  width: 200px;
+  height: 200px;
   margin-right: 8px;
+}
+/* #00E5FF cyan/ primary 
+Secondarys #FF00E5 hot pink, #E5FF00 yellow,  
+Neutrals black and white */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Reset & Global Box Model */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.4;
+  letter-spacing: 0.0625rem; /* 1px */
+  word-spacing: 0.05625rem; /* 0.9px ~ 0.057rem */
+  font-size: 1.2rem;
+  margin: 0 1.25rem; /* 20px → 1.25rem */
+}
+
+/* Navbar */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  backdrop-filter: blur(0.5rem); /* 8px → 0.5rem */
+  background: rgba(20, 20, 20, 0.6);
+  border-bottom: 1px solid #00f7ff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  margin-left: -1.25rem; /* undo body margin 20px */
+}
+
+header h2 {
+  font-size: 2rem;
+  color: #ff007f;
+  text-transform: uppercase;
+}
+
+nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* Navigation Links */
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px; /* keep px for thin border */
+  bottom: -0.25rem; /* -4px → -0.25rem */
+  left: 0;
+  background-color: #ff007f;
+  transition: width 0.4s ease;
+}
+
+nav a:hover {
+  color: #ff007f;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+main {
+  border: 4px solid yellow;
+  /* debugging border left as px */
+}
+
+/* Card Styling */
+.card {
+  background: #111111;
+  padding: 1.5rem;
+  border-left: 5px solid #ff007f;
+  border-radius: 0.75rem; /* 12px → 0.75rem */
+  box-shadow: 0 0 0.75rem #ff007f66; /* 12px → 0.75rem */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-0.3125rem); /* -5px → -0.3125rem */
+  box-shadow: 0 0 1.875rem #ff007faa; /* 30px → 1.875rem */
+}
+
+.card img {
+  width: 100%;
+  height: 18.75rem; /* 300px → 18.75rem */
+  border-radius: 0.625rem; /* 10px → 0.625rem */
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  color: #ff007f;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+/* Section Spacing */
+section {
+  margin-bottom: 3em;
+}
+
+/* Generic Div Styling */
+div {
+  background-color: black;
+  padding: 1.25rem; /* 20px → 1.25rem */
+  border-radius: 0.3125rem; /* 5px → 0.3125rem */
+}
+
+/* Footer Styling */
+footer {
+  text-align: center;
+  padding: 0;
+  background-color: #000000;
+  border-top: 1px solid #00f7ff;
+}
+
+footer p {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+footer .social-media-links {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-grow: 0;
+  flex-shrink: 1;
+  gap: 3vw;
+}
+
+footer a {
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+footer a img {
+  width: 12.5rem; /* 200px → 12.5rem */
+  height: 12.5rem; /* 200px → 12.5rem */
+  margin-right: 0.5rem; /* 8px → 0.5rem */
 }

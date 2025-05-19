@@ -3,13 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Discovering Naawi-Oodena</title>
+    <title>Naawi-Oodena – The Future After Dark</title>
     <link rel="stylesheet" href="style.css" />
-    <style></style>
+    <style>
+.video-container {
+  position: relative;
+  width: 80%;             
+  max-width: 960px;       
+  aspect-ratio: 16 / 9;   
+  margin: 5rem auto;      
+  border: 4px solid #00e5ff;
+  border-radius: 1rem;
+  box-shadow: 0 0 25px #00e5ff88;
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  overflow: hidden;
+}
+.video-container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 60px #00e5ffaa;
+}
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+      /* Content Grid */
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+        /* 300px → 18.75rem */
+        gap: 2rem;
+        padding: 4rem 2rem;
+        align-items: start;
+        grid-auto-rows: 1fr;
+        align-items: stretch;
+      }
+    </style>
   </head>
+
   <body>
+    <!-- NAV -->
     <header>
-      <h1>Naawi-Oodena</h1>
+      <h2>Naawi-Oodena</h2>
       <nav>
         <a href="index.html">Home</a>
         <a href="exploring-naawi-oodena.html">Exploring</a>
@@ -18,102 +54,56 @@
     </header>
 
     <main>
-      <section></section>
-
-      <section>
-        <figure class="video-container">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/ODH13-YOeyE"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            aria-label="Embedded YouTube video about Naawi-Oodena">
-          </iframe>
-          <figcaption>
-            <a
-              href="https://www.youtube.com/watch?v=ODH13-YOeyE"
-              target="_blank">
-              Watch the Naawi-Oodena Development Overview on YouTube
-            </a>
-          </figcaption>
-        </figure>
+      <section class="video-container" aria-label="Introductory video about Naawi-Oodena" id="video">
+        <iframe
+          src="https://www.youtube.com/embed/ODH13-YOeyE"
+          title="Naawi-Oodena Development Overview"
+          allowfullscreen></iframe>
       </section>
 
-      <section>
-        <div>
-          <h1>Residential (Lower and Medium Density)</h1>
+      <!-- FEATURE GRID BUT DIFFERENT SINCE 4 IMAGES -->
+      <section class="grid">
+        <div class="card">
+          <img src="lebron-james-10.webp" />
+          <h3>Residential (Lower and Medium Density) </h3>
           <p>
-            In the future Naawi-Oodena, housing actually means something. It’s
-            not just a bunch of buildings stacked together. This place feels
-            like home. You’ve got a solid mix of homes depending on how you
-            live. There are quiet streets with family houses, and there are also
-            mid-rise apartments and stacked townhomes that still feel like they
-            belong to the land. Whether it’s elders, young adults, families, or
-            someone just starting out, everyone has a space here. You’re not
-            boxed in. It’s open, walkable, and everywhere you go, you’re
-            surrounded by nature. That makes a difference. Even right in the
-            city, it feels calm and grounded.
+            In Naawi-Oodena, housing actually means something. It’s not just a bunch of buildings stacked together. This place feels like home. You’ve got a solid mix of homes depending on how you live. There are quiet streets with family houses, and there are also mid-rise apartments and stacked townhomes that still feel like they belong to the land. Whether it’s elders, young adults, families, or someone just starting out, everyone has a space here. You’re not boxed in. It’s open, walkable, and everywhere you go, you’re surrounded by nature. That makes a difference. Even right in the city, it feels calm and grounded. 
+          </p>
+        </div>
+
+        <div class="card">
+          <img src="lebron-james-10.webp" alt="Cultural Campus and Education" />
+          <h3>Community Spaces </h3>
+          <p>
+            This is where Naawi-Oodena really shows who it is. The community spaces aren't just parks. They’re built with meaning. You’ll find paths that cut through natural areas, mirrored ponds that freeze in winter, fire pits, spaces for ceremony, and quiet corners where people go to reflect. Native plants fill the landscape. First Nations art is part of everything. The design makes it easy to be outside and feel connected to the land. It’s a place that works year-round. People don’t just pass through they gather, they laugh, they remember. It feels good here. Feels like something real. 
+          </p>
+        </div>
+
+        <div class="card">
+          <img src="lebron-james-10.webp" alt="Youth Centre" />
+          <h3>Sports and Recreation </h3>
+          <p>
+            Naawi-Oodena was made for movement. It doesn’t matter the season. There’s always something going on. You’ve got sports fields, rec centers, outdoor courts, and big open parks. In the winter, those ponds turn into skating rinks. In the summer, they’re full of life. There’s a plan for a huge powwow arbour ( traditional Indigenous gatherings)  too something big enough for the whole community and more. This isn’t about just staying fit. It’s about people getting together, staying healthy, and keeping the energy of the place flowing. Whether you’re into sports or just want to be out and moving, you’re covered. 
           </p>
         </div>
       </section>
 
-      <section>
-        <div>
-          <h1>Community Spaces</h1>
-          <p>
-            This is where Naawi-Oodena really shows who it is. The community
-            spaces aren't just parks. They’re built with meaning. You’ll find
-            paths that cut through natural areas, mirrored ponds that freeze in
-            winter, fire pits, spaces for ceremony, and quiet corners where
-            people go to reflect. Native plants fill the landscape. First
-            Nations art is part of everything. The design makes it easy to be
-            outside and feel connected to the land. It’s a place that works
-            year-round. People don’t just pass through — they gather, they
-            laugh, they remember. It feels good here. Feels like something real.
-          </p>
-        </div>
-      </section>
-
-      <section>
-        <div>
-          <h1>Sports and Recreation</h1>
-          <p>
-            Naawi-Oodena was made for movement. It doesn’t matter the season.
-            There’s always something going on. You’ve got sports fields, rec
-            centers, outdoor courts, and big open parks. In the winter, those
-            ponds turn into skating rinks. In the summer, they’re full of life.
-            There’s a plan for a huge powwow arbour (traditional Indigenous
-            gatherings) too — something big enough for the whole community and
-            more. This isn’t about just staying fit. It’s about people getting
-            together, staying healthy, and keeping the energy of the place
-            flowing. Whether you’re into sports or just want to be out and
-            moving, you’re covered.
-          </p>
-        </div>
-      </section>
-
-      <section>
-        <div>
-          <h1>Mixed-Use Village</h1>
-          <p>
-            The village core is where it all comes together. It’s the heart of
-            the place. You can live here, eat here, shop, hang out, see art, and
-            go to events, all within walking distance. The streets are built for
-            people, not cars. You’ve got homes on top of businesses, wide
-            sidewalks, outdoor seating, public art, and everything is done with
-            culture in mind. It’s not crowded or chaotic. It’s chill and
-            designed to feel good. There’s even space for a future transit hub.
-            Whether you live in this part or not, you’re probably going to end
-            up here just to feel that pulse.
-          </p>
-        </div>
-      </section>
+      <div class="card">
+        <img src="lebron-james-10.webp" alt="Youth Centre" />
+        <h3>Mixed-Use Village </h3>
+        <p>
+          The village core is where it all comes together. It’s the heart of the place. You can live here, eat here, shop, hang out, see art, and go to events, all within walking distance. The streets are built for people, not cars. You’ve got homes on top of businesses, wide sidewalks, outdoor seating, public art, and everything is done with culture in mind. It’s not crowded or chaotic. It’s chill and designed to feel good. There’s even space for a future transit hub. Whether you live in this part or not, you’re probably going to end up here just to feel that pulse. 
+        </p>
+      </div>
+    </section>
     </main>
 
     <footer>
-      <p>© 2045 Abhi Kalkat</p>
+      <p>
+        © 2045 Abhi Kalkat. All rights reserved. This website is currently under
+        development, and some features including social media links are still in
+        progress. Thank you for your patience and support!
+      </p>
       <div class="social-media-links">
         <a href="https://www.instagram.com" target="_blank">
           <img src="Instagram_logo_2022.svg" alt="Instagram" />Instagram
