@@ -81,6 +81,8 @@ Date Last Modified: May 19, 2025
         color: #ff3df2;
         /* space below heading */
         margin-bottom: 1rem;
+        /* Add animation doesn't take away from content */
+        animation: fadeSlideUp 2s ease-out forwards;
       }
 
       /* hero paragraph text styling */
@@ -91,20 +93,22 @@ Date Last Modified: May 19, 2025
         color: #ffffff;
       }
 
-      /* content grid section */
-      .grid {
-        /* enable grid layout */
-        display: grid;
-        /* responsive columns */
-        grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
-        /* space between cards */
-        gap: 2rem;
-        /* top/bottom and side padding */
-        padding: 4rem 2rem;
-        /* make cards same height */
-        align-items: stretch;
-        /* consistent row height */
-        grid-auto-rows: 1fr;
+      /* Define a keyframe animation called fadeSlideUp we didn't learn this in class */
+      @keyframes fadeSlideUp {
+        /* Starting state of the animation (0%) */
+        0% {
+          /* Start slightly below the normal position */
+          transform: translateY(1.25rem);
+          /* Fully transparent at the start (invisible) */
+          opacity: 0;
+        }
+        /* Ending state of the animation (100%) */
+        100% {
+          /* Fully visible at the end */
+          opacity: 1;
+          /* Return to original Y position */
+          transform: translateY(0);
+        }
       }
     </style>
   </head>
@@ -149,7 +153,9 @@ Date Last Modified: May 19, 2025
         <!-- Nightlife card -->
         <div class="card">
           <!--Calm nice image-->
-          <img src="ChatGPT Image May 16, 2025, 02_52_29 PM.png" alt="" />
+          <img
+            src="ChatGPT Image May 16, 2025, 02_52_29 PM.png"
+            alt="A picture of a animated group of people gathered around a campfire, around them is food places such as wild rice bowls and Bannock Tacos. The sky is displaying the northern lights. A very yellowish pictures. Above the cammfire there is a 2 story building with glass. On the bottom floor there is people singing, above is is a person looking out the window. There is rope lights connecting to main building. There is art of a owl and a bird in neon colors" />
           <!--3rd Biggest Text-->
           <h3>Nightlife</h3>
           <p>
@@ -168,8 +174,8 @@ Date Last Modified: May 19, 2025
         <!-- Cultural Campus and Education card -->
         <div class="card">
           <img
-            src="ChatGPT Image May 19, 2025, 04_07_20 PM.png"
-            alt="Cultural Campus and Education" />
+            src="ChatGPT Image May 20, 2025, 12_11_10 AM.png"
+            alt="A glowing cultural hub sits under a purple and orange sky, where buildings marked Museum, Art Gallery, Treaty Governance, and School light up with soft neon outlines. Large Indigenous murals cover the walls, calm and powerful. Curved paths glow through the trees and open spaces. Looks like a school campus and 2 people are walking in. " />
           <h3>Cultural Campus and Education</h3>
           <p>
             This part of Naawi-Oodena is all about learning and legacy. It’s
@@ -188,7 +194,7 @@ Date Last Modified: May 19, 2025
         <div class="card">
           <img
             src="ChatGPT Image May 19, 2025, 05_48_21 PM.png"
-            alt="A futuristic Indigenous district lights up at night with smooth, modern buildings glowing in cyan. Signs like INDIGENOUS GOODS,WELLNESS, and CAFÉ show how the space mixes culture, community, and business. The wide sidewalks, greenery, and clean layout make it feel alive, calm, and built for connection." />
+            alt="A futuristic Indigenous symbol glows under the night sky on a building. The buildings are smooth and modern, lit with soft light, and signs like Indigenous Goods, Wellness, and Cafe stand out. Wide sidewalks with some greenery, and the whole space feels open and calm. Looks like a street in downtown." />
           <h3>Commercial Mixed-Use</h3>
           <p>
             This part of Naawi-Oodena has a different kind of energy. It’s not
@@ -220,15 +226,21 @@ Date Last Modified: May 19, 2025
       <div class="social-media-links">
         <!--Instagram logo and link-->
         <a href="https://www.instagram.com" target="_blank">
-          <img src="Instagram_logo_2022.svg" alt="Instagram" />Instagram
+          <img
+            src="Instagram_logo_2022.svg"
+            alt=" minimalist white camera outline on a vibrant gradient background that fades from purple to pink to orange to yellow" />Instagram
         </a>
         <!--Youtube logo and link-->
         <a href="https://www.youtube.com" target="_blank">
-          <img src="yt.png" alt="YouTube" />YouTube
+          <img
+            src="yt.png"
+            alt="Black and white icon showing a rounded rectangle like a TV screen, with a white play button triangle in the middle—representing the YouTube logo." />YouTube
         </a>
         <!--X logo and link-->
         <a href="https://www.twitter.com" target="_blank">
-          <img id="twitter-icon" src="cmon-man.webp" alt="Twitter" />
+          <img
+            src="cmon-man.webp"
+            alt="Bold black and white letter X with sharp diagonal lines, representing the new X logo, formerly known as Twitter." />
           Twitter
         </a>
       </div>

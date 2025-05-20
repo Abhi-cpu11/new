@@ -11,7 +11,7 @@
   thing is breathing. 
   Cyan and yellow create wonderful role players for the superstar pink. Cyan (#3DF2FF) is 
   used for header and footer separators, card borders, and card shadows.
-  Yellow (#F2FF3D) adds punch to the social media footer text. 
+  Yellow (#F2FF3D) adds punch to the social media footer text and link text. 
   This triadic family wasn’t just for aesthetics it’s built to reflect the vibe and purpose 
   of Naawi-Oodena.
   Future-facing, futuristic, vibrant, and full of life after dark. 
@@ -121,8 +121,16 @@ nav a::after {
   left: 0;
   /* Hot pink underline */
   background-color: #ff3df2;
-  /* Animate width */
-  transition: width 0.4s ease;
+  /* Addtional Transititon (also could use steps here which is choppy)
+  Transition width we didn't learn in class, controls how width the underlineline is going to be creating a smooth effect
+  cubic-bezier(0.1, 0.1, 0.1, 0.1) means:
+  x1 = 0.1: the first speed change starts early
+  y1 = 0.1: very little progress has been made at that point
+  x2 = 0.1: the second curve point also happens early
+  y2 = 0.1: still very little animation progress
+  This creates an animation that starts slow, stays slow, and ends slow
+  this one Starts slow, speeds up, then slows down*/
+  transition: width 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 nav a:hover {
@@ -173,6 +181,8 @@ main {
   border-radius: 10px;
   /* Spacing below the image */
   margin-bottom: 1rem;
+  /* This crops the image neatly without distortion */
+  object-fit: cover;
 }
 
 .card h3 {
@@ -264,4 +274,20 @@ footer a img {
   /* Fixed width and height */
   width: 200px;
   height: 200px;
+}
+
+/* content grid section */
+.grid {
+  /* enable grid layout */
+  display: grid;
+  /* responsive columns */
+  grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+  /* space between cards */
+  gap: 2rem;
+  /* top/bottom and side padding */
+  padding: 4rem 2rem;
+  /* make cards same height */
+  align-items: stretch;
+  /* consistent row height */
+  grid-auto-rows: 1fr;
 }

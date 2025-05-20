@@ -51,20 +51,21 @@
         /* Display block removes inline spacing */
         display: block;
       }
-      /* Grid container for feature cards */
-      .grid {
-        /* Use CSS Grid layout */
-        display: grid;
-        /* Automatically fit columns with minimum 18.75rem and max flexible width */
-        grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
-        /* Space of 2rem between grid items horizontally and vertically */
-        gap: 2rem;
-        /* Padding inside the grid container */
-        padding: 4rem 2rem;
-        /* Stretch cards to fill the grid row height */
-        align-items: stretch;
-        /* Make all grid rows equal height */
-        grid-auto-rows: 1fr;
+      .video-link {
+        /* Center the text */
+        text-align: center;
+        /* Add margin for spacing closer to video */
+        margin-top: -3.5rem;
+        /* hard to read with glow*/
+        opacity: 0.9;
+      }
+      .video-link a {
+        /* color yellow */
+        color: #f2ff3d;
+      }
+
+      .video-link a:hover {
+        text-decoration: underline;
       }
     </style>
   </head>
@@ -80,6 +81,7 @@
         <a href="contact.html">Contact Us</a>
       </nav>
     </header>
+
     <!-- Main content of the page -->
     <main>
       <!-- Video section container with accessible label -->
@@ -90,6 +92,17 @@
           title="Naawi-Oodena Development Overview"
           allowfullscreen></iframe>
       </section>
+
+      <!-- Move the paragraph OUTSIDE of the fixed-height container -->
+      <section>
+        <p class="video-link">
+          <a href="https://www.youtube.com/watch?v=ODH13-YOeyE" target="_blank">
+            Watch the Naawi-Oodena Development Overview on YouTube By Clicking
+            On This Text.
+          </a>
+        </p>
+      </section>
+
       <!-- Grid section containing feature cards -->
       <section class="grid">
         <!-- Single feature card -->
@@ -97,7 +110,7 @@
           <!-- Image representing the residential area with alt text -->
           <img
             src="May 19, 2025, 05_54_25 PM.png"
-            alt="A futuristic Indigenous neighborhood at sunset blends modern homes with nature and calm design. Low-rise houses and mid-rise apartments glow with cyan neon lines, while the sky shifts from warm orange to deep twilight. Wide, winding paths, native greenery, and soft lighting make the area feel open, grounded, and peaceful." />
+            alt="A futuristic Indigenous neighborhood at sunset blends modern homes with nature and calm design. Low-rise houses and mid-rise apartments glow with cyan neon lines, while the sky shifts from warm orange to deep twilight. Wide, winding paths, native greenery, and soft lighting make the area feel open, grounded, and peaceful. Some houses light room turned on while majority aren't " />
           <!-- Card title -->
           <h3>Residential (Lower and Medium Density)</h3>
           <!-- Card description paragraph -->
@@ -114,12 +127,13 @@
             calm and grounded.
           </p>
         </div>
+
         <!-- Another feature card -->
         <div class="card">
           <!-- Image representing community spaces -->
           <img
             src="ChatGPT Image May 19, 2025, 06_05_02 PM.png"
-            alt="A calm and futuristic park with Indigenous vibes, where people are walking around peaceful paths surrounded by nature. There’s a fire pit with totem poles, streams running through, and buildings in the back with cool art on the walls. The lighting from the sunset makes the whole place feel warm, real, and grounded like somewhere you'd actually want to be." />
+            alt="A calm and futuristic park with Indigenous vibes, where people are walking around peaceful paths surrounded by nature. It looks like a seasonal chnage. There’s a fire pit with totem poles, streams running through, and city buildings in the back. In the foreground there is cool art on the walls. The lighting from the sunset makes the whole place feel warm, real, and grounded." />
           <!-- Card title -->
           <h3>Community Spaces</h3>
           <!-- Card description paragraph -->
@@ -135,12 +149,13 @@
             they remember. It feels good here. Feels like something real.
           </p>
         </div>
+
         <!-- Sports and recreation card -->
         <div class="card">
           <!-- Image related to sports and youth -->
           <img
             src="ChatGPT Image May 19, 2025, 06_13_18 PM.png"
-            alt="A vibrant park at sunset with people walking, biking, and playing basketball near tall totem poles and a fire pit. A large mural of an Indigenous face is painted on a modern building, surrounded by trees and pathways. Toward the back, there's a pond space that turns into a skating rink in winter, showing how the area is made for every season." />
+            alt="A vibrant park at sunset with people walking, kids biking, and futher away playing basketball near tall totem poles and a fire pit. A large mural of an Indigenous art is painted on a modern building in background, surrounded by trees and pathways. Toward the back, there's a pond space that turns into a skating rink in winter, showing how the area is made for every season." />
           <!-- Card title -->
           <h3>Sports and Recreation</h3>
           <!-- Card description paragraph -->
@@ -157,29 +172,32 @@
             moving, you’re covered.
           </p>
         </div>
+
+        <!-- Mixed-Use Village card -->
+        <div class="card">
+          <!-- Image representing the mixed-use village -->
+          <img
+            src="ChatGPT Image May 19, 2025, 06_38_00 PM.png"
+            alt="A nighttime Indigenous village core lit with neon signs, showing a blend of modern life and deep culture. People walk through a pedestrian street lined with cafés and restaurants, while a large mural of an Indigenous woman lights up the center. On the right, a glowing sign labeled , HUB marks space set aside for a future transit center." />
+          <!-- Card title -->
+          <h3>Mixed-Use Village</h3>
+          <!-- Card description paragraph -->
+          <p>
+            The village core is where it all comes together. It’s the heart of
+            the place. You can live here, eat here, shop, hang out, see art, and
+            go to events, all within walking distance. The streets are built for
+            people, not cars. You’ve got homes on top of businesses, wide
+            sidewalks, outdoor seating, public art, and everything is done with
+            culture in mind. It’s not crowded or chaotic. It’s chill and
+            designed to feel good. There’s even space for a future transit hub.
+            Whether you live in this part or not, you’re probably going to end
+            up here just to feel that pulse.
+          </p>
+        </div>
       </section>
-      <!-- Mixed-Use Village card (outside grid container) -->
-      <div class="card">
-        <!-- Image representing the mixed-use village -->
-        <img
-          src="ChatGPT Image May 19, 2025, 06_38_00 PM.png"
-          alt="A nighttime Indigenous village core lit with neon signs and glowing murals, showing a blend of modern life and deep culture. People walk through a pedestrian street lined with cafés and restaurants, while a large mural of an Indigenous woman lights up the center. On the right, a glowing sign labeled HUB marks space set aside for a future transit center, connecting the community’s heart to what's ahead." />
-        <!-- Card title -->
-        <h3>Mixed-Use Village</h3>
-        <!-- Card description paragraph -->
-        <p>
-          The village core is where it all comes together. It’s the heart of the
-          place. You can live here, eat here, shop, hang out, see art, and go to
-          events, all within walking distance. The streets are built for people,
-          not cars. You’ve got homes on top of businesses, wide sidewalks,
-          outdoor seating, public art, and everything is done with culture in
-          mind. It’s not crowded or chaotic. It’s chill and designed to feel
-          good. There’s even space for a future transit hub. Whether you live in
-          this part or not, you’re probably going to end up here just to feel
-          that pulse.
-        </p>
-      </div>
     </main>
+
+    <!-- Footer section -->
     <footer>
       <!-- Copyright and Yip Yap -->
       <p>
@@ -193,15 +211,19 @@
         <a href="https://www.instagram.com" target="_blank">
           <img
             src="Instagram_logo_2022.svg"
-            alt="Instagram Logo In yellow and purple" />Instagram
+            alt=" minimalist white camera outline on a vibrant gradient background that fades from purple to pink to orange to yellow" />Instagram
         </a>
         <!--Youtube logo and link-->
         <a href="https://www.youtube.com" target="_blank">
-          <img src="yt.png" alt="YouTube" />YouTube
+          <img
+            src="yt.png"
+            alt="Black and white icon showing a rounded rectangle like a TV screen, with a white play button triangle in the middle—representing the YouTube logo." />YouTube
         </a>
         <!--X logo and link-->
         <a href="https://www.twitter.com" target="_blank">
-          <img id="twitter-icon" src="cmon-man.webp" alt="Twitter" />
+          <img
+            src="cmon-man.webp"
+            alt="Bold black and white letter X with sharp diagonal lines, representing the new X logo, formerly known as Twitter." />
           Twitter
         </a>
       </div>
