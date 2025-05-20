@@ -10,8 +10,8 @@
     <style>
       /* style padding in internal to offset main and the section from clashing */
       main {
-        /* sets padding around main content */
-        padding: 2rem 2rem 2rem;
+        /* sets padding around main content, for liquid layout needs to be bove 4 rem for top, 5 to make sure */
+        padding: 5rem 2rem 5rem;
       }
 
       /* styles for the contact section inside main */
@@ -116,8 +116,73 @@
         font-size: 1rem;
         /* bold text */
         font-weight: bold;
-        /* pointer cursor on hover */
+        /* pointer cursor on hover addtional feature */
         cursor: pointer;
+      }
+
+      /* Styles for the Did You Know toggle box and for addtional feature*/
+      .didyouknow {
+        /* Make it a block element so it takes up full width unless restricted */
+        display: block;
+
+        /* Shrinks the box to fit just the text content */
+        width: fit-content;
+
+        /* Prevents the box from stretching too wide */
+        max-width: 400px;
+
+        /* Aligns the text content to the left inside the box */
+        text-align: left;
+
+        /* Aligns the box itself to the left of its container */
+        margin-left: 0;
+
+        /* Prevents it from centering (used with margin-left) */
+        margin-right: auto;
+
+        /* Adds a bright yellow border to match your theme */
+        border: 2px solid #f2ff3d;
+
+        /* Adds padding inside the box for spacing */
+        padding: 1rem;
+
+        /* Adds space above the box */
+        margin-top: 2rem;
+
+        /* Rounds the corners of the box slightly */
+        border-radius: 12px;
+
+        /* Dark background for better contrast */
+        background-color: #111;
+
+        /* White text color */
+        color: #fff;
+
+        /* Makes the box look clickable */
+        cursor: pointer;
+
+        /* Smooth transition for hover or layout changes */
+        transition: all 0.3s ease;
+
+        /* Set base font size */
+        font-size: 1.2rem;
+      }
+
+      /* Hidden fact text by default */
+      .didyouknow .fact-box {
+        /* Hide it */
+        display: none;
+        /* Space above the fact text */
+        margin-top: 1rem;
+        /* Cyan text color */
+        color: #3df2ff;
+        /* Slightly smaller font */
+        font-size: 0.95rem;
+      }
+
+      /* When checkbox is checked, show fact */
+      .didyouknow input:checked + .title + .fact-box {
+        display: block;
       }
     </style>
   </head>
@@ -144,6 +209,22 @@
           website, please use the form below. We'll get back to you as soon as
           possible.
         </p>
+
+        <section>
+          <!-- Label groups input, title text, and hidden fact -->
+          <label class="didyouknow">
+            <!-- Hidden checkbox used for toggle -->
+            <input type="checkbox" hidden />
+            <!-- Text shown always -->
+            <span class="title" tabindex="1"
+              >Wait a minute did you know ( click or tab on text)?</span
+            >
+            <!-- Hidden fact that appears on click -->
+            <span class="fact-box">
+              Naawi-Oodena means “centre of the heart” in Anishinaabemowin.
+            </span>
+          </label>
+        </section>
 
         <!-- Contact form with GET method for submission -->
         <form method="get">

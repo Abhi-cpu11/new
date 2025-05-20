@@ -145,7 +145,7 @@ nav a:hover::after {
 
 main {
   /* Create visual separation between cyan border and yellow border */
-  margin-top: 7rem;
+  margin-top: 9rem;
   /* Keep your yellow border good use of secondary and to display main information is in the yellow border */
   border: 0.5px solid #f2ff3d;
 }
