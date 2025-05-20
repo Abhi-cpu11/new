@@ -8,14 +8,10 @@
     <!-- External stylesheet -->
     <link rel="stylesheet" href="style.css" />
     <style>
-      /* styles for the main content area and is interna to offset the nav bar */
+      /* style padding in internal to offset main and the section from clashing */
       main {
         /* sets padding around main content */
-        padding: 6rem 2rem 3rem;
-        /* sets black background color */
-        background-color: #000000;
-        /* sets white text color */
-        color: #ffffff;
+        padding: 2rem 2rem 2rem;
       }
 
       /* styles for the contact section inside main */
@@ -24,14 +20,14 @@
         max-width: 700px;
         /* center horizontally */
         margin: 0 auto;
-        /* dark gray background */
-        background-color: #111111;
+        /* dark background */
+        background-color: #000000;
         /* padding inside section */
         padding: 2rem;
         /* rounded corners */
         border-radius: 0.75rem;
-        /* pink glowing shadow */
-        box-shadow: 0 0 1.25rem #ff3df2;
+        /* cyan - secondary color glowing shadow */
+        box-shadow: 0 0 1.25rem #3df2ff;
       }
 
       /* styles for heading inside contact section */
@@ -40,7 +36,7 @@
         font-size: 2rem;
         /* margin below heading */
         margin-bottom: 1rem;
-        /* pink heading color */
+        /* pink primary heading color */
         color: #ff3df2;
         /* center heading text */
         text-align: center;
@@ -80,8 +76,8 @@
         padding: 0.75rem;
         /* margin above form controls */
         margin-top: 0.5rem;
-        /* thin dark gray border */
-        border: 1px solid #444;
+        /* thin white border */
+        border: 1px solid #ffffff;
         /* black background inside fields */
         background-color: #000;
         /* white text inside inputs */
@@ -100,8 +96,6 @@
         margin-top: 0.1875rem;
         /* smaller font size */
         font-size: 0.85rem;
-        /* light gray text */
-        color: #ccc;
       }
 
       /* styles for the submit button */
@@ -124,8 +118,6 @@
         font-weight: bold;
         /* pointer cursor on hover */
         cursor: pointer;
-        /* smooth background color transition */
-        transition: background-color 0.3s ease;
       }
     </style>
   </head>
@@ -207,7 +199,7 @@
           <select id="role" name="role" required>
             <!--
               option with no value and disabled so user can't select it
-              selected attribute shows this as default prompt
+              selected attribute shows this as default prompt, addtional feauture
             -->
             <option value="" disabled selected>Select one</option>
             <!-- Option for student -->
@@ -220,7 +212,7 @@
             <option value="other">Other</option>
           </select>
           <!-- Helper text for role selection -->
-          <small>Let us know your role or relation to the site.</small>
+          <small>Let us know your role or who you are to the site.</small>
 
           <!-- Topic input label -->
           <label for="topic">What is your message about?</label>

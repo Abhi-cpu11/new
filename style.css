@@ -1,9 +1,25 @@
-/* #FF3DF2 primary 
-  Secondarys
-  #3DF2FF cyan
-  #F2FF3D yellow,  
-   Neutrals black and white */
-
+/*
+  My color family is a triadic setup, pink (#FF3DF2), cyan (#3DF2FF), and yellow (#F2FF3D), 
+  backed by black and white neutrals.
+  The moment you hit the site, the colors hit back. 
+  You see all three colors right away, but it’s the pink that grabs you first loud, bold, 
+  impossible to ignore. 
+  It pulls your eyes in, like it’s alive. There’s this futuristic, 
+  neon glow that feels like it’s piercing straight through the screen.
+  The background 
+  video? That’s not just for looks it amplifies the pink, makes it feel like the whole 
+  thing is breathing. 
+  Cyan and yellow create wonderful role players for the superstar pink. Cyan (#3DF2FF) is 
+  used for header and footer separators, card borders, and card shadows.
+  Yellow (#F2FF3D) adds punch to the social media footer text. 
+  This triadic family wasn’t just for aesthetics it’s built to reflect the vibe and purpose 
+  of Naawi-Oodena.
+  Future-facing, futuristic, vibrant, and full of life after dark. 
+  The colors speak to energy, movement, and youth, making it feel like the community is 
+  glowing with possibility.
+  It’s a place that doesn’t just exist, it shines through the dark. 
+  Ms. H helped me make this color scheme.
+*/
 html {
   /* Enable smooth scrolling for anchor links */
   scroll-behavior: smooth;
@@ -48,8 +64,8 @@ header {
   backdrop-filter: blur(8px);
   /* Semi-transparent background for layered look */
   background: rgba(20, 20, 20, 0.6);
-  /* Cyan border at the bottom for visual separation */
-  border-bottom: 2px solid #3df2ff;
+  /* Cyan border at the bottom for visual separation, and good use of secondary */
+  border-bottom: 3px solid #3df2ff;
   /* Align items horizontally */
   display: flex;
   justify-content: space-between;
@@ -63,7 +79,7 @@ header {
 header h2 {
   /* Make header text larger */
   font-size: 2rem;
-  /* Hot pink for visual emphasis */
+  /* Hot pink for visual emphasis and nice primary color*/
   color: #ff3df2;
   /* Make text all uppercase */
   text-transform: uppercase;
@@ -120,7 +136,9 @@ nav a:hover::after {
 }
 
 main {
-  /* Thin yellow border to help visualize layout */
+  /* Create visual separation between cyan border and yellow border */
+  margin-top: 7rem;
+  /* Keep your yellow border good use of secondary and to display main information is in the yellow border */
   border: 0.5px solid #f2ff3d;
 }
 
@@ -130,12 +148,12 @@ main {
   /* Padding inside the card */
   padding: 1.5rem;
   /* Add left-side accent border */
-  border-left: 5px solid #ff3df2;
+  border-left: 5px solid #3df2ff;
   /* Slightly rounded corners */
   border-radius: 12px;
   /* Pink glow shadow */
-  box-shadow: 0 0 12px #ff3df2;
-  /* Animation for hover effects */
+  box-shadow: 0 0 12px #3df2ff;
+  /* A Transition for hover effects */
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -143,7 +161,7 @@ main {
   /* Lift the card slightly */
   transform: translateY(-5px);
   /* Enhance the glow */
-  box-shadow: 0 0 30px #ff3df2;
+  box-shadow: 0 0 15px #3df2ff;
 }
 
 .card img {
@@ -188,7 +206,12 @@ footer {
   /* Black background */
   background-color: #000000;
   /* Cyan top border for separation */
-  border-top: 2px solid #3df2ff;
+  border-top: 3px solid #3df2ff;
+  /* Add space above the footer and to seperate it from my main */
+  margin-top: 2rem;
+  /* Cancel out body’s 20px margin */
+  margin-left: -20px;
+  margin-right: -20px;
 }
 
 footer p {
@@ -233,7 +256,7 @@ footer a {
 footer a:hover {
   /* Underline text */
   text-decoration: underline;
-  /* Slight transparency */
+  /* Slight transparency for reading*/
   opacity: 0.8;
 }
 
