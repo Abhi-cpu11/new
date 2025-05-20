@@ -6,77 +6,118 @@ Teacher: Ms. Hoitink
 
 School: Pembina Trails Collegiate 
 
-Date Last Modified: May 14, 2025 
-
-Change color scheme
+Date Last Modified: May 19, 2025 
 -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Set character encoding -->
     <meta charset="UTF-8" />
+    <!-- Make the site responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Page title shown in browser tab -->
     <title>Naawi-Oodena – The Future After Dark</title>
+    <!-- Link to external stylesheet -->
     <link rel="stylesheet" href="style.css" />
+
+    <!-- Internal CSS style sheet -->
     <style>
       /* HERO VIDEO SECTION */
+      /* container for hero video section */
       .hero-video {
+        /* positions children absolutely */
         position: relative;
+        /* full width */
         width: 100%;
+        /* full screen height */
         height: 100vh;
+        /* hides overflow */
         overflow: hidden;
-        margin-top: 4.375rem; /* 70px → 4.375rem */
+        /* space from top */
+        margin-top: 4.375rem;
       }
 
+      /* style the video to center and cover the container */
       .hero-video video {
+        /* absolute inside relative container */
         position: absolute;
+        /* center vertically */
         top: 50%;
+        /* center horizontally */
         left: 50%;
+        /* true center alignment */
         transform: translate(-50%, -50%);
+        /* fill width */
         min-width: 100%;
+        /* fill height */
         min-height: 100%;
+        /* maintain aspect ratio, fill space */
         object-fit: cover;
       }
 
+      /* overlay text box inside hero section */
       .hero-text {
+        /* place it over the video */
         position: absolute;
+        /* center vertically */
         top: 50%;
+        /* center horizontally */
         left: 50%;
+        /* true center alignment */
         transform: translate(-50%, -50%);
+        /* center the text */
         text-align: center;
+        /* white text */
         color: #ffffff;
-        backdrop-filter: blur(0.1875rem); /* 3px → 0.1875rem */
+        /* slight background blur */
+        backdrop-filter: blur(0.1875rem);
+        /* space inside box */
         padding: 1rem;
       }
 
+      /* main title styling */
       .hero-text h1 {
+        /* large heading */
         font-size: 3rem;
-        color: #ff007f;
+        /* bright pink color */
+        color: #ff3df2;
+        /* space below heading */
         margin-bottom: 1rem;
       }
 
+      /* hero paragraph text styling */
       .hero-text p {
+        /* readable size */
         font-size: 1.2rem;
+        /* white text */
         color: #ffffff;
       }
 
-      /* Content Grid */
+      /* content grid section */
       .grid {
+        /* enable grid layout */
         display: grid;
+        /* responsive columns */
         grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
-        /* 300px → 18.75rem */
+        /* space between cards */
         gap: 2rem;
+        /* top/bottom and side padding */
         padding: 4rem 2rem;
-        align-items: start;
-        grid-auto-rows: 1fr;
+        /* make cards same height */
         align-items: stretch;
+        /* consistent row height */
+        grid-auto-rows: 1fr;
       }
     </style>
   </head>
 
   <body>
-    <!-- NAV -->
+    <!-- Site header with logo and navigation -->
     <header>
+      <!-- Website title -->
       <h2>Naawi-Oodena</h2>
+      <!-- Navigation links -->
       <nav>
         <a href="index.html">Home</a>
         <a href="exploring-naawi-oodena.html">Exploring</a>
@@ -84,25 +125,35 @@ Change color scheme
       </nav>
     </header>
 
-    <!-- HERO VIDEO -->
+    <!-- Main content section -->
     <main>
+      <!-- Hero section with video background -->
       <section class="hero-video">
+        <!-- Background video (looping, autoplaying and muted) -->
         <video autoplay muted loop>
           <source src="cool-hulio.mp4" type="video/mp4" />
           <!-- Ensure the video file name is correct -->
         </video>
+        <!-- Overlay text on video -->
         <div class="hero-text">
+          <!--Biggest Text Size-->
           <h1>Live the Glow</h1>
+          <!--Lil slogan for the paragraph-->
           <p>
             Where culture, future, and nightlife come alive at Naawi-Oodena.
           </p>
+          <!--Closing for Div-->
         </div>
+        <!-- end of .hero-video section -->
       </section>
 
-      <!-- FEATURE GRID -->
+      <!-- Grid layout section for feature cards -->
       <section class="grid">
+        <!-- Nightlife card -->
         <div class="card">
+          <!--Calm nice image-->
           <img src="ChatGPT Image May 16, 2025, 02_52_29 PM.png" />
+          <!--3rd Biggest Text-->
           <h3>Nightlife</h3>
           <p>
             When the sun goes down, Naawi-Oodena doesn’t sleep. It glows. The
@@ -117,8 +168,11 @@ Change color scheme
           </p>
         </div>
 
+        <!-- Cultural Campus and Education card -->
         <div class="card">
-          <img src="lebron-james-10.webp" alt="Cultural Campus and Education" />
+          <img
+            src="ChatGPT Image May 19, 2025, 04_07_20 PM.png"
+            alt="Cultural Campus and Education" />
           <h3>Cultural Campus and Education</h3>
           <p>
             This part of Naawi-Oodena is all about learning and legacy. It’s
@@ -133,8 +187,11 @@ Change color scheme
           </p>
         </div>
 
+        <!-- Commercial Mixed-Use card -->
         <div class="card">
-          <img src="lebron-james-10.webp" alt="Youth Centre" />
+          <img
+            src="ChatGPT Image May 19, 2025, 05_48_21 PM.png"
+            alt="A futuristic Indigenous district lights up at night with smooth, modern buildings glowing in cyan. Signs like INDIGENOUS GOODS,WELLNESS, and CAFÉ show how the space mixes culture, community, and business. The wide sidewalks, greenery, and clean layout make it feel alive, calm, and built for connection." />
           <h3>Commercial Mixed-Use</h3>
           <p>
             This part of Naawi-Oodena has a different kind of energy. It’s not
@@ -149,25 +206,33 @@ Change color scheme
             culture and pride.
           </p>
         </div>
+        <!-- end of .grid section -->
       </section>
+      <!-- end of main content -->
     </main>
 
-    <!-- FOOTER, when the social media pages is done Ms.Hoitink will hip me up so I can directly take them to there instead of leaving blank -->
+    <!-- Footer section -->
     <footer>
+      <!-- Copyright and Yip Yap -->
       <p>
         © 2045 Abhi Kalkat. All rights reserved. This website is currently under
         development, and some features including social media links are still in
         progress. Thank you for your patience and support!
       </p>
+      <!-- Social media links (to be completed later) -->
       <div class="social-media-links">
+        <!--Instagram logo and link-->
         <a href="https://www.instagram.com" target="_blank">
           <img src="Instagram_logo_2022.svg" alt="Instagram" />Instagram
         </a>
+        <!--Youtube logo and link-->
         <a href="https://www.youtube.com" target="_blank">
           <img src="yt.png" alt="YouTube" />YouTube
         </a>
+        <!--X logo and link-->
         <a href="https://www.twitter.com" target="_blank">
-          <img src="x.png" alt="Twitter" />Twitter
+          <img id="twitter-icon" src="cmon-man.webp" alt="Twitter" />
+          Twitter
         </a>
       </div>
     </footer>

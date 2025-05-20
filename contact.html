@@ -1,87 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Metadata and page title -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us - Naawi-Oodena</title>
+    <!-- External stylesheet -->
     <link rel="stylesheet" href="style.css" />
     <style>
-      /* Contact Page Styles */
+      /* styles for the main content area and is interna to offset the nav bar */
       main {
-        padding: 6rem 2rem 3rem; /* rem stays */
+        /* sets padding around main content */
+        padding: 6rem 2rem 3rem;
+        /* sets black background color */
         background-color: #000000;
+        /* sets white text color */
         color: #ffffff;
       }
 
+      /* styles for the contact section inside main */
       section#contact {
-        max-width: 700px; /* leave in px for max-width */
+        /* max width 700px for contact section */
+        max-width: 700px;
+        /* center horizontally */
         margin: 0 auto;
+        /* dark gray background */
         background-color: #111111;
-        padding: 2rem; /* rem */
-        border-radius: 0.75rem; /* 12px → rem for scaling */
-        box-shadow: 0 0 1.25rem #ff007f; /* 20px → rem */
+        /* padding inside section */
+        padding: 2rem;
+        /* rounded corners */
+        border-radius: 0.75rem;
+        /* pink glowing shadow */
+        box-shadow: 0 0 1.25rem #ff3df2;
       }
 
+      /* styles for heading inside contact section */
       section#contact h2 {
-        font-size: 2rem; /* rem */
-        margin-bottom: 1rem; /* rem */
-        color: #ff007f;
+        /* heading font size */
+        font-size: 2rem;
+        /* margin below heading */
+        margin-bottom: 1rem;
+        /* pink heading color */
+        color: #ff3df2;
+        /* center heading text */
         text-align: center;
       }
 
+      /* styles for paragraph inside contact section */
       section#contact p {
-        margin-bottom: 2rem; /* rem */
+        /* margin below paragraph */
+        margin-bottom: 2rem;
+        /* center paragraph text */
         text-align: center;
+        /* white paragraph text */
         color: #ffffff;
-        font-size: 1.1rem; /* rem */
+        /* slightly larger font */
+        font-size: 1.1rem;
       }
 
+      /* styles for all form labels */
       form label {
+        /* labels displayed as block */
         display: block;
-        margin-top: 1rem; /* rem */
+        /* margin above labels */
+        margin-top: 1rem;
+        /* bold label text */
         font-weight: bold;
-        color: #ff007f;
+        /* pink label text */
+        color: #ff3df2;
       }
 
+      /* styles for input, select, and textarea elements inside form */
       form input,
       form select,
       form textarea {
+        /* inputs, selects, textareas full width */
         width: 100%;
-        padding: 0.75rem; /* rem */
-        margin-top: 0.5rem; /* rem */
-        border: 1px solid #444; /* leave px for thin border */
+        /* padding inside form controls */
+        padding: 0.75rem;
+        /* margin above form controls */
+        margin-top: 0.5rem;
+        /* thin dark gray border */
+        border: 1px solid #444;
+        /* black background inside fields */
         background-color: #000;
+        /* white text inside inputs */
         color: #fff;
-        border-radius: 0.4375rem; /* 7px → rem */
-        font-size: 1rem; /* rem */
+        /* rounded corners */
+        border-radius: 0.4375rem;
+        /* font size 1rem */
+        font-size: 1rem;
       }
 
+      /* styles for small helper text inside form */
       form small {
+        /* small helper text block */
         display: block;
-        margin-top: 0.1875rem; /* 3px → rem */
-        font-size: 0.85rem; /* rem */
+        /* small margin above small text */
+        margin-top: 0.1875rem;
+        /* smaller font size */
+        font-size: 0.85rem;
+        /* light gray text */
         color: #ccc;
       }
 
+      /* styles for the submit button */
       .button {
-        margin-top: 2rem; /* rem */
-        background-color: #ff007f;
-        color: white;
-        padding: 0.75rem 1.5rem; /* rem */
+        /* margin above button */
+        margin-top: 2rem;
+        /* pink background */
+        background-color: #ff3df2;
+        /* white button text */
+        color: black;
+        /* vertical and horizontal padding */
+        padding: 0.75rem 1.5rem;
+        /* no border */
         border: none;
-        border-radius: 0.375rem; /* 6px → rem */
-        font-size: 1rem; /* rem */
+        /* rounded corners */
+        border-radius: 0.375rem;
+        /* font size */
+        font-size: 1rem;
+        /* bold text */
         font-weight: bold;
+        /* pointer cursor on hover */
         cursor: pointer;
+        /* smooth background color transition */
         transition: background-color 0.3s ease;
-      }
-
-      .button:hover {
-        background-color: #ff3399;
       }
     </style>
   </head>
   <body>
+    <!-- Site header with title and navigation links -->
     <header>
       <h2>Naawi-Oodena</h2>
       <nav>
@@ -91,85 +140,158 @@
       </nav>
     </header>
 
+    <!-- Main content area -->
     <main>
+      <!-- Contact form section -->
       <section id="contact">
+        <!-- Section heading -->
         <h2>Contact Us</h2>
+        <!-- Introductory paragraph for contact form -->
         <p>
           If you have any questions, comments, or suggestions about this
           website, please use the form below. We'll get back to you as soon as
           possible.
         </p>
 
+        <!-- Contact form with GET method for submission -->
         <form method="get">
+          <!-- Full Name field label -->
           <label for="full-name">Full Name:</label>
+          <!-- Text input for full name -->
+          <!--
+            type="text": standard single-line text input
+            id="full-name": unique identifier to link label and input
+            name="full-name": form submission key for this input
+            placeholder: example text shown when empty
+            required: makes this field mandatory to fill before submit
+          -->
           <input
             type="text"
             id="full-name"
             name="full-name"
             placeholder="e.g. Abhi Kalkat"
             required />
+          <!-- Helper text under full name input -->
           <small>Enter your full legal name.</small>
 
+          <!-- Email Address field label -->
           <label for="email">Email Address:</label>
+          <!-- Email input field -->
+          <!--
+            type="email": input type validates email format automatically
+            id="email": unique identifier for label association
+            name="email": form submission key for email address
+            placeholder: example email shown when empty
+            required: field must be filled before submitting
+          -->
           <input
             type="email"
             id="email"
             name="email"
             placeholder="e.g. you@example.com"
             required />
-          <small
-            >We'll only use email to respond to your message. Please enter a
-            valid email format (e.g. name@example.com).</small
-          >
+          <!-- Helper text under email input -->
+          <small>
+            We'll only use email to respond to your message. Please enter a
+            valid email format (e.g. name@example.com).
+          </small>
 
+          <!-- Role selection label -->
           <label for="role">Who are you?</label>
+          <!-- Dropdown selection input -->
+          <!--
+            id="role": connects label to select element
+            name="role": key used on form submission for selected option
+            required: forces user to select one option before submitting
+          -->
           <select id="role" name="role" required>
+            <!--
+              option with no value and disabled so user can't select it
+              selected attribute shows this as default prompt
+            -->
             <option value="" disabled selected>Select one</option>
+            <!-- Option for student -->
             <option value="student">Student</option>
+            <!-- Option for teacher -->
             <option value="teacher">Teacher</option>
+            <!-- Option for parent -->
             <option value="parent">Parent</option>
+            <!-- Option for other roles -->
             <option value="other">Other</option>
           </select>
+          <!-- Helper text for role selection -->
           <small>Let us know your role or relation to the site.</small>
 
+          <!-- Topic input label -->
           <label for="topic">What is your message about?</label>
+          <!-- Text input for message topic -->
+          <!--
+            type="text": simple single-line input
+            id="topic": links label to input
+            name="topic": key for form data
+            placeholder: example text
+            required: field must be filled
+          -->
           <input
             type="text"
             id="topic"
             name="topic"
             placeholder="e.g. Correction, Question, Appreciation"
             required />
+          <!-- Helper text for topic input -->
           <small>Briefly summarize your message topic.</small>
 
+          <!-- Message textarea label -->
           <label for="message">Your Message:</label>
+          <!-- Multi-line textarea for detailed message -->
+          <!--
+            id="message": associates label with textarea
+            name="message": form submission key
+            rows="6": textarea height in lines
+            placeholder: instruction shown inside empty textarea
+            required: must fill before submit
+          -->
           <textarea
             id="message"
             name="message"
             rows="6"
             placeholder="Type your full message here..."
             required></textarea>
+          <!-- Helper text for message textarea -->
           <small>Please include all relevant details for your message.</small>
 
+          <!-- Submit button -->
+          <!--
+            type="submit": sends the form data to the server
+            class="button": applies styling
+          -->
           <button type="submit" class="button">Send Message</button>
         </form>
       </section>
     </main>
 
+    <!-- Footer section -->
     <footer>
+      <!-- Copyright and Yip Yap -->
       <p>
         © 2045 Abhi Kalkat. All rights reserved. This website is currently under
         development, and some features including social media links are still in
         progress. Thank you for your patience and support!
       </p>
+      <!-- Social media links (to be completed later) -->
       <div class="social-media-links">
+        <!--Instagram logo and link-->
         <a href="https://www.instagram.com" target="_blank">
           <img src="Instagram_logo_2022.svg" alt="Instagram" />Instagram
         </a>
+        <!--Youtube logo and link-->
         <a href="https://www.youtube.com" target="_blank">
           <img src="yt.png" alt="YouTube" />YouTube
         </a>
+        <!--X logo and link-->
         <a href="https://www.twitter.com" target="_blank">
-          <img src="x.png" alt="Twitter" />Twitter
+          <img id="twitter-icon" src="cmon-man.webp" alt="Twitter" />
+          Twitter
         </a>
       </div>
     </footer>
