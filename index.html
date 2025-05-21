@@ -24,6 +24,7 @@ Date Last Modified: May 19, 2025
     <style>
       /* HERO VIDEO SECTION */
       /* container for hero video section and is addtional feauture */
+
       .hero-video {
         /* positions children absolutely */
         position: relative;
@@ -44,12 +45,16 @@ Date Last Modified: May 19, 2025
         /* center horizontally */
         left: 50%;
         /* true center alignment */
+        /* translate to center */
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
         /* fill width */
         min-width: 100%;
         /* fill height */
         min-height: 100%;
         /* maintain aspect ratio, fill space */
+        -o-object-fit: cover;
         object-fit: cover;
       }
 
@@ -62,12 +67,15 @@ Date Last Modified: May 19, 2025
         /* center horizontally */
         left: 50%;
         /* true center alignment */
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
         /* center the text */
         text-align: center;
         /* white text */
         color: #ffffff;
         /* slight background blur */
+        -webkit-backdrop-filter: blur(0.1875rem);
         backdrop-filter: blur(0.1875rem);
         /* space inside box */
         padding: 1rem;
@@ -82,6 +90,7 @@ Date Last Modified: May 19, 2025
         /* space below heading */
         margin-bottom: 1rem;
         /* Add animation doesn't take away from content */
+        -webkit-animation: fadeSlideUp 2s ease-out forwards;
         animation: fadeSlideUp 2s ease-out forwards;
       }
 
@@ -94,10 +103,11 @@ Date Last Modified: May 19, 2025
       }
 
       /* Define a keyframe animation called fadeSlideUp we didn't learn this in class */
-      @keyframes fadeSlideUp {
+      @-webkit-keyframes fadeSlideUp {
         /* Starting state of the animation (0%) */
         0% {
           /* Start slightly below the normal position */
+          -webkit-transform: translateY(1.25rem);
           transform: translateY(1.25rem);
           /* Fully transparent at the start (invisible) */
           opacity: 0;
@@ -107,6 +117,25 @@ Date Last Modified: May 19, 2025
           /* Fully visible at the end */
           opacity: 1;
           /* Return to original Y position */
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+        }
+      }
+      @keyframes fadeSlideUp {
+        /* Starting state of the animation (0%) */
+        0% {
+          /* Start slightly below the normal position */
+          -webkit-transform: translateY(1.25rem);
+          transform: translateY(1.25rem);
+          /* Fully transparent at the start (invisible) */
+          opacity: 0;
+        }
+        /* Ending state of the animation (100%) */
+        100% {
+          /* Fully visible at the end */
+          opacity: 1;
+          /* Return to original Y position */
+          -webkit-transform: translateY(0);
           transform: translateY(0);
         }
       }
@@ -132,14 +161,17 @@ Date Last Modified: May 19, 2025
       <section class="hero-video">
         <!-- Background video (looping, autoplaying and muted) -->
         <video autoplay muted loop>
-          <source src="cool-hulio.mp4" type="video/mp4" alt="" />
+          <source
+            src="cool-hulio.mp4"
+            type="video/mp4"
+            alt="Image of Naawi-Oodena in the future, in foreground tree's and a pond. In background it looks like downtown, but in a neon fashion. The main color being pink. Various large tall buildings and some small main buildings. On the left side there is a massive dimaond looking thing. The video trnasitions from light pink and other neon colors to a darker tone of them." />
           <!-- Ensure the video file name is correct -->
         </video>
         <!-- Overlay text on video -->
         <div class="hero-text">
-          <!--Biggest Text Size-->
+          <!--Biggest Text Size and Is used fo the slogan because live the glow means embrace the glowyness and future this place has-->
           <h1>Live the Glow</h1>
-          <!--Lil slogan for the paragraph-->
+          <!--Lil intro-->
           <p>
             Where culture, future, and nightlife come alive at Naawi-Oodena.
           </p>
@@ -159,15 +191,15 @@ Date Last Modified: May 19, 2025
           <!--3rd Biggest Text-->
           <h3>Nightlife</h3>
           <p>
-            When the sun goes down, Naawi-Oodena doesn’t sleep. It glows. The
-            nightlife is different here. It’s not clubs and chaos. It’s
-            community. You’ve got rooftop patios, outdoor music spots, night
-            markets with Indigenous food, and cafés hosting open mic nights.
-            Some nights you hear drumming. Some nights it’s just calm voices
-            around a fire. It’s safe. It’s lit up. And it feels alive without
-            being loud. The night in Naawi-Oodena has its own rhythm. It’s about
-            being together, celebrating culture, and letting the place breathe
-            after dark. No pressure. Just vibes.
+            When the sun goes down, Naawi-Oodena doesn’t sleep. It glows like
+            the sloagan,"Live the Glow". The nightlife is different here. It’s
+            not clubs and chaos. It’s community. You’ve got rooftop patios,
+            outdoor music spots, night markets with Indigenous food, and cafes
+            hosting open mic nights. Some nights you hear drumming. Some nights
+            it’s just calm voices around a fire. It’s safe. It’s lit up. And it
+            feels alive without being loud. The night in Naawi-Oodena has its
+            own rhythm. It’s about being together, celebrating culture, and
+            letting the place breathe after dark. Just vibes.
           </p>
         </div>
 
@@ -183,10 +215,11 @@ Date Last Modified: May 19, 2025
             art galleries, and a center for Treaty One governance all in one
             place. This is where stories get passed down. Where language,
             ceremony, and identity are built into the walls. It doesn’t feel
-            like a regular campus. It feels alive. Every corner has meaning.
-            From the art on the buildings to the way the spaces are set up for
-            gathering, it’s built for the future but grounded in the past.
-            People don’t just come here to learn. They come to grow.
+            like a regular campus. It feels almost like a utopia for schools.
+            Every corner has meaning. From the art on the buildings to the way
+            the spaces are set up for gathering, it’s built for the future but
+            grounded in the past. People don’t just come here to learn. They
+            come to grow.
           </p>
         </div>
 
@@ -197,16 +230,17 @@ Date Last Modified: May 19, 2025
             alt="A futuristic Indigenous symbol glows under the night sky on a building. The buildings are smooth and modern, lit with soft light, and signs like Indigenous Goods, Wellness, and Cafe stand out. Wide sidewalks with some greenery, and the whole space feels open and calm. Looks like a street in downtown." />
           <h3>Commercial Mixed-Use</h3>
           <p>
-            This part of Naawi-Oodena has a different kind of energy. It’s not
-            just stores and office buildings. It’s a place where things happen.
-            Indigenous-owned shops, local cafés, wellness spaces, creative
-            studios, even some big stores mixed in — it all fits together. The
-            buildings are made to bring people in. Wide sidewalks, space to sit
-            and chill, room for patios. You can live upstairs and run a business
-            downstairs. You can grab lunch, meet someone for coffee, or just
-            walk through and feel like you're part of something. It’s more than
-            just convenience. It’s about creating an economy that reflects
-            culture and pride.
+            Commercial side has a different kind of vibe/spirit. It’s not just
+            stores and office buildings. It’s a place where things happen.
+            Indigenous-owned shops, local cafes, wellness spaces, creative
+            studios, even some big stores mixed in it all fits together. The
+            buildings are made to bring people in. Wide sidewalks, space for
+            everyone to sit and chill. You can live upstairs and run a business
+            downstairs if that's you're cup of tea. You can grab lunch, meet
+            someone for coffee, or just walk through and feel like you're part
+            of something. It’s more than just convenience. It’s about creating
+            an economy that reflects culture and pride. Their focus is peoples
+            needs not money.
           </p>
         </div>
         <!-- end of .grid section -->

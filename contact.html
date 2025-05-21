@@ -27,6 +27,7 @@
         /* rounded corners */
         border-radius: 0.75rem;
         /* cyan - secondary color glowing shadow */
+        -webkit-box-shadow: 0 0 1.25rem #3df2ff;
         box-shadow: 0 0 1.25rem #3df2ff;
       }
 
@@ -125,6 +126,8 @@
         /* Make it a block element so it takes up full width unless restricted */
         display: block;
         /* Shrinks the box to fit just the text content */
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
         width: fit-content;
         /* Prevents the box from stretching too wide */
         max-width: 400px;
@@ -149,6 +152,8 @@
         /* Makes the box look clickable */
         cursor: pointer;
         /* Smooth transition for hover or layout changes */
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
         transition: all 0.3s ease;
         /* Set base font size */
         font-size: 1.2rem;
